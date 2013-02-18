@@ -4739,3 +4739,2322 @@ in C:\xampp\htdocs\bb\backend\index.php (13)
 2013/02/17 20:06:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
 in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
 in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:32 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:32 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:25:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:26:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:37 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:37 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:37 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:37 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:28:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:29:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:30:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:31:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:32:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND t1.name like :name
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND t1.name like :name
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:37:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND t1.name like :name
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND t1.name like :name
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND t1.name like :name
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:38:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (t1.name like :name OR t3.name like :name OR t4.name like :name)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:41:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (t1.name like :name OR t3.name like :name OR t4.name like :name)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:42:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (225)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (225)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (225)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (225)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (225)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:49:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (225)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t` ORDER BY name
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:50:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t` ORDER BY name
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND brand_id=:brand_id
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:51:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t` ORDER BY name
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (t1.name like :name OR t3.name like :name OR t4.name like :name)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t` ORDER BY name
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (t1.name like :name OR t3.name like :name OR t4.name like :name)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:52:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t` ORDER BY name
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (t1.name like :name OR t3.name like :name OR t4.name like :name)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:53:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t` ORDER BY name
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND brand_id=:brand_id
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t` ORDER BY name
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t` ORDER BY name
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND brand_id=:brand_id
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_brands`
+in C:\xampp\htdocs\bb\backend\protected\models\Brand.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:54:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_brands` `t` ORDER BY name
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (227)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:11:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (231)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND (category_id=:category_id OR parent_id=:category_id)
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE id=:id LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (211)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (231)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND brand_id=:brand_id
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:12:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (231)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1 AND brand_id=:brand_id
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (229)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:13:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (229)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:17:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:28:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:29:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:30:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:35:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:36:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_categories`
+in C:\xampp\htdocs\bb\backend\protected\models\Category.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_categories` `t` WHERE parent_id=0 ORDER BY if(parent_id = 0, id, parent_id), parent_id
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (203)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT t1.*, group_concat(t3.name) category, t4.name brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`id`
+ORDER BY `id` DESC
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (41)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (207)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_status`
+in C:\xampp\htdocs\bb\backend\protected\models\Status.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_status` `t`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (218)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `bb_currencies`
+in C:\xampp\htdocs\bb\backend\protected\models\Currency.php (6)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `bb_currencies` `t` WHERE symbol=:symbol LIMIT 1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (223)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 22:42:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT DISTINCT `t2`.*
+FROM `bb_products` `t1`
+JOIN `bb_brands` `t2` ON t1.brand_id = t2.id
+JOIN `bb_category_product` `t3` ON t1.id=t3.product_id
+ORDER BY `t2`.`name`
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)

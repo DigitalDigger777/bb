@@ -7,8 +7,6 @@
                 <input type="text" name="full_name" id="full_name" />
                 <label for="mobile_phone">Мобильный телефон</label>
                 <input type="text" name="mobile_phone" id="cell-phone" />
-                <label for="phone">Телефон</label>
-                <input type="text" name="phone" id="phone" />
                 <label for="email">E-mail</label>
                 <input type="text" name="email" id="email" />
             </fieldset>

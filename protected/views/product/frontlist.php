@@ -5,6 +5,11 @@
         <li<?php echo (isset($_REQUEST['cat_id'])&&$_REQUEST['cat_id'] == $category->id)?' class="active"':''; ?>><a href="index.php?r=product/productlist&cat_id=<?php echo $category->id; ?>"><?php echo Yii::t('main', $category->name);?></a></li>
         <?php endforeach;?>
     </ul>
+    <ul class="nav nav-list well" style="margin-top: 10px;">
+        <?php foreach($brands as $item):?>
+        <li<?php echo (isset($_REQUEST['brand_id'])&&$_REQUEST['brand_id'] == $item['id'])?' class="active"':''; ?>><a href="index.php?r=product/productlist&brand_id=<?php echo $item['id']; ?>"><?php echo $item['name']; ?></a></li>
+        <?php endforeach;?>
+    </ul>
 </div>
 <?php 
     $count = count($products);

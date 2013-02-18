@@ -1253,3 +1253,23 @@ Stack trace:
 REQUEST_URI=/bb/backend/index.php?r=category%2Fsave&id=0&parent_id=0&name=%D0%A2%D0%B5%D1%81%D1%8211111&meta_keywords=%D1%82&meta_desc=%D0%BA
 in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (41)
 in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/18 21:48:21 [error] [exception.CException] exception 'CException' with message 'Property "Brand.brand_id" is not defined.' in C:\xampp\htdocs\bb\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(143): CComponent->__get('brand_id')
+#1 C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php(10): CActiveRecord->__get('brand_id')
+#2 C:\xampp\htdocs\bb\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\bb\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(782): CController->renderPartial('frontlist', Array, true)
+#6 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(226): CController->render('frontlist', Array)
+#7 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#8 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('productlist')
+#12 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#13 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/bb/backend/index.php?r=product/productlist
+---

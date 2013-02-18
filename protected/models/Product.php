@@ -10,7 +10,7 @@ class Product extends CActiveRecord
         return 'bb_products';
     }
     
-    public static function getProductList($category_id = 0, $brand_id = 0)
+    public static function getProductList($category_id = 0, $brand_id = 0, $search = '')
     {
         $condition = '1';
         $params = array();
@@ -23,6 +23,11 @@ class Product extends CActiveRecord
         {
             $condition .= ' AND brand_id=:brand_id';
             $params[':brand_id'] = $brand_id;
+        }
+        if(!empty($search))
+        {
+            $condition .= ' AND (t1.name like :name OR t3.name like :name OR t4.name like :name)';
+            $params[':name'] = '%'.$search.'%';
         }
         $products = Yii::app()->getDb()->createCommand()
                                        ->selectDistinct('t1.*, group_concat(t3.name) category, t4.name brand')

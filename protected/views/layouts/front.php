@@ -19,13 +19,13 @@
         <div class="row-fluid">
             <div class="navbar navbar-fixed-top">
                 <div class="navbar-inner">
-                    <a class="brand" href="index.php?r=product/productlist">BeautyBay</a>
-                    <form class="form-search navbar-search pull-left">
+                    <form class="form-search navbar-search pull-left" action="index.php?r=product/productlist" method="POST" style="margin-left: 10px">
                       <div class="input-append">
-                            <input type="text" class="search-query" placeholder="Поиск по ключевому слову" style="width: 300px;">
+                            <input name="search" type="text" class="search-query" placeholder="Поиск по ключевому слову" value="<?php echo isset($_REQUEST['search'])?$_REQUEST['search']:''; ?>" style="width: 290px;">
                             <button type="submit" class="btn">Найти</button>
                       </div>
                     </form>
+                    <a class="brand" href="index.php?r=product/productlist" style="margin-left: 232px;color:#cb2027; font-style: italic">BeautyBay</a>
                     <ul class="nav pull-right">
                         <li><a href="#">Вход через Facebook</a></li>
                         <li class="divider-vertical"></li>

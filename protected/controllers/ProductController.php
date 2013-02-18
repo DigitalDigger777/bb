@@ -204,7 +204,7 @@ class ProductController extends Controller
         //продукты
         $cat_id = isset($_REQUEST['cat_id'])?$_REQUEST['cat_id']:0;
         $brand_id = isset($_REQUEST['brand_id'])?$_REQUEST['brand_id']:0;
-        $products = Product::getProductList($cat_id, $brand_id);
+        $products = Product::getProductList($cat_id, $brand_id, isset($_REQUEST['search'])?$_REQUEST['search']:'');
         //текущая категория
         if($cat_id)
         {
@@ -221,7 +221,14 @@ class ProductController extends Controller
             $status[$item->id] = $item->name;
         //валюта
         $currency = Currency::model()->find('symbol=:symbol',array(':symbol'=>isset($_REQUEST['symbol'])?$_REQUEST['symbol']:'UAH'));
-        $this->render('frontlist', array('categories'=>$categories, 'products'=>$products, 'status'=>$status, 'currency'=>$currency));
+        //бренды
+        $brands = Yii::app()->getDb()->createCommand()
+                                     ->selectDistinct('t2.*')
+                                     ->from('bb_products t1')
+                                     ->join('bb_brands t2', 't1.brand_id = t2.id')
+                                     ->join('bb_category_product t3', 't1.id=t3.product_id')
+                                     ->order('t2.name')->queryAll();
+        $this->render('frontlist', array('categories'=>$categories, 'products'=>$products, 'status'=>$status, 'currency'=>$currency, 'brands'=>$brands));
     }
     //карточка продукта
     public function actionFrontProduct()
