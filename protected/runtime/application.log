@@ -1,0 +1,1255 @@
+2013/02/10 11:00:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "products".' in C:\xampp\htdocs\bb\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(270): CController->missingAction('products')
+#1 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('products')
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('order/products')
+#3 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bb/backend/index.php?r=order/products
+---
+2013/02/10 14:16:17 [error] [php] Undefined variable: products (C:\xampp\htdocs\bb\backend\protected\views\product\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(7): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+in C:\xampp\htdocs\bb\backend\protected\views\product\index.php (5)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (7)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 14:16:54 [error] [php] Undefined variable: products (C:\xampp\htdocs\bb\backend\protected\views\product\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(7): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+in C:\xampp\htdocs\bb\backend\protected\views\product\index.php (5)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (7)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 14:23:33 [error] [php] Object of class Product could not be converted to string (C:\xampp\htdocs\bb\backend\protected\views\product\index.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(8): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+in C:\xampp\htdocs\bb\backend\protected\views\product\index.php (18)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (8)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 14:28:41 [error] [php] Undefined offset: 750 (C:\xampp\htdocs\bb\backend\protected\views\product\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(8): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+in C:\xampp\htdocs\bb\backend\protected\views\product\index.php (19)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (8)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 14:30:10 [error] [php] Undefined offset: 750 (C:\xampp\htdocs\bb\backend\protected\views\product\index.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(8): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+in C:\xampp\htdocs\bb\backend\protected\views\product\index.php (20)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (8)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 14:49:52 [error] [php] Undefined index: 1 (C:\xampp\htdocs\bb\backend\protected\views\product\index.php:25)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(12): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+in C:\xampp\htdocs\bb\backend\protected\views\product\index.php (25)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (12)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 15:04:56 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT `t3`.*
+FROM `bb_categories` `t1`
+JOIN `bb_category_product` `t2` ON t1.id=t2.category_id
+JOIN `bb_products` `t3` ON t2.product_id = t3.id
+WHERE t1.id=:category_id.
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (14)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 15:04:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT `t3`.*
+FROM `bb_categories` `t1`
+JOIN `bb_category_product` `t2` ON t1.id=t2.category_id
+JOIN `bb_products` `t3` ON t2.product_id = t3.id
+WHERE t1.id=:category_id' in C:\xampp\htdocs\bb\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(14): CDbCommand->query()
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=product&category_id=1
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php?r=category
+---
+2013/02/10 18:39:12 [error] [php] Undefined index: photo (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:68)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/save
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (68)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 19:00:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "unpublic".' in C:\xampp\htdocs\bb\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(270): CController->missingAction('unpublic')
+#1 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('unpublic')
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product/unpubli...')
+#3 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bb/backend/index.php?r=product/unpublic&id=779
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php?r=product
+---
+2013/02/10 19:01:22 [error] [php] Undefined variable: products (C:\xampp\htdocs\bb\backend\protected\views\product\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(87): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionPublic()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/public&id=779
+in C:\xampp\htdocs\bb\backend\protected\views\product\index.php (5)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (87)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 19:09:01 [error] [php] Undefined variable: brands (C:\xampp\htdocs\bb\backend\protected\views\product\product.php:57)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(93): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionEdit()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/edit&id=3
+in C:\xampp\htdocs\bb\backend\protected\views\product\product.php (57)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (93)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 19:20:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '779' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `bb_products` (`id`, `brand_id`, `name`, `desc`, `photo`, `price`, `margin`, `discount`, `ebay`, `status_id`, `lang`, `public`, `order`, `end_public`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13).
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (79)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 19:20:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '779' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `bb_products` (`id`, `brand_id`, `name`, `desc`, `photo`, `price`, `margin`, `discount`, `ebay`, `status_id`, `lang`, `public`, `order`, `end_public`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13)' in C:\xampp\htdocs\bb\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(79): CActiveRecord->save()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionSave()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('save')
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product/save')
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bb/backend/index.php?r=product/save
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php?r=product/edit&id=779
+---
+2013/02/10 19:21:35 [error] [php] Undefined variable: product (C:\xampp\htdocs\bb\backend\protected\views\product\product.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(82): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionSave()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/save
+in C:\xampp\htdocs\bb\backend\protected\views\product\product.php (21)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (82)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 19:22:33 [error] [php] Undefined variable: brands (C:\xampp\htdocs\bb\backend\protected\views\product\product.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(82): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionSave()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/save
+in C:\xampp\htdocs\bb\backend\protected\views\product\product.php (58)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (82)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/10 19:34:20 [error] [php] Undefined variable: cnt_category (C:\xampp\htdocs\bb\backend\protected\views\site\index.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\SiteController.php(125): SiteController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): SiteController->actionSite()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=site/site
+in C:\xampp\htdocs\bb\backend\protected\views\site\index.php (2)
+in C:\xampp\htdocs\bb\backend\protected\controllers\SiteController.php (125)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 13:42:23 [error] [exception.CException] exception 'CException' with message 'CategoryController cannot find the requested view "product".' in C:\xampp\htdocs\bb\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(782): CController->renderPartial('product', Array, true)
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(40): CController->render('product', Array)
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionEdit()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('edit')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category/edit')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=category/edit&id=122
+HTTP_REFERER=http://localhost:888/bb/backend/index.php?r=category
+---
+2013/02/11 13:43:00 [error] [exception.CException] exception 'CException' with message 'CategoryController cannot find the requested view "product".' in C:\xampp\htdocs\bb\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(782): CController->renderPartial('product', Array, true)
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(40): CController->render('product', Array)
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionEdit()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('edit')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category/edit')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=category/edit&id=122
+HTTP_REFERER=http://localhost:888/bb/backend/index.php?r=category
+---
+2013/02/11 13:43:25 [error] [exception.CException] exception 'CException' with message 'CategoryController cannot find the requested view "category".' in C:\xampp\htdocs\bb\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(782): CController->renderPartial('category', Array, true)
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(40): CController->render('category', Array)
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionEdit()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('edit')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category/edit')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=category/edit&id=122
+HTTP_REFERER=http://localhost:888/bb/backend/index.php?r=category
+---
+2013/02/11 13:53:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "load".' in C:\xampp\htdocs\bb\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(270): CController->missingAction('load')
+#1 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('load')
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category/load')
+#3 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bb/backend/index.php?r=category%2Fload&id=122
+HTTP_REFERER=http://localhost:888/bb/backend/index.php?r=category/edit&id=122
+---
+2013/02/11 13:53:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "load".' in C:\xampp\htdocs\bb\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(270): CController->missingAction('load')
+#1 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('load')
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category/load')
+#3 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bb/backend/index.php?r=category%2Fload&id=123
+HTTP_REFERER=http://localhost:888/bb/backend/index.php?r=category/edit&id=122
+---
+2013/02/11 13:53:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "load".' in C:\xampp\htdocs\bb\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(270): CController->missingAction('load')
+#1 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('load')
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category/load')
+#3 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bb/backend/index.php?r=category%2Fload&id=123
+HTTP_REFERER=http://localhost:888/bb/backend/index.php?r=category/edit&id=122
+---
+2013/02/11 13:53:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "load".' in C:\xampp\htdocs\bb\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(270): CController->missingAction('load')
+#1 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('load')
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category/load')
+#3 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bb/backend/index.php?r=category%2Fload&id=123
+HTTP_REFERER=http://localhost:888/bb/backend/index.php?r=category/edit&id=122
+---
+2013/02/11 14:53:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploadphoto".' in C:\xampp\htdocs\bb\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(270): CController->missingAction('uploadphoto')
+#1 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('uploadphoto')
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product/uploadp...')
+#3 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+HTTP_REFERER=http://localhost:888/bb/backend/index.php?r=product/product
+---
+2013/02/11 14:57:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "uploadphoto".' in C:\xampp\htdocs\bb\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(270): CController->missingAction('uploadphoto')
+#1 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('uploadphoto')
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product/uploadp...')
+#3 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+HTTP_REFERER=http://localhost:888/bb/backend/index.php?r=product/product
+---
+2013/02/11 14:57:45 [error] [php] Undefined index: _photo (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:110)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (110)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:07:37 [error] [php] Undefined index: _photo (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:110)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (110)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:08:00 [error] [php] Undefined index: _photo (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:110)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (110)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:08:25 [error] [php] getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:110)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#2 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#4 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (110)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:09:54 [error] [php] Undefined index: _photo (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:110)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (110)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:11:44 [error] [php] getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:112)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#2 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#4 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (112)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:15:31 [error] [php] getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:112)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#2 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#4 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (112)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:27:21 [error] [php] getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:112)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#2 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#4 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (112)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:27:48 [error] [php] getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:112)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#2 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#4 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (112)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:30:34 [error] [php] getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:112)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#2 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#4 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/uploadphoto
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (112)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 15:50:26 [error] [php] Undefined property: Brand::$_md (C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php:399)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(136): Brand->getMetaData()
+#1 C:\xampp\htdocs\bb\backend\protected\views\product\product.php(55): Brand->__get()
+#2 C:\xampp\htdocs\bb\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\bb\framework\web\CBaseController.php(95): ProductController->renderInternal()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#6 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(38): ProductController->render()
+#7 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProduct()
+#8 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#10 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#11 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#12 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/product
+in C:\xampp\htdocs\bb\backend\protected\views\product\product.php (55)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (38)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 21:56:57 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/edit&id=1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (127)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 21:57:18 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/edit&id=1
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (127)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 22:02:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-785' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `bb_category_product` (`category_id`, `product_id`) VALUES (:category_id, :product_id).
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (103)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/11 22:02:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-785' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `bb_category_product` (`category_id`, `product_id`) VALUES (:category_id, :product_id)' in C:\xampp\htdocs\bb\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\CDbCommand.php(1247): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(103): CDbCommand->insert('bb_category_pro...', Array)
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionSave()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('save')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product/save')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=product/save
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php?r=product/edit&id=785
+---
+2013/02/12 20:13:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: SELECT * FROM `bb_categories` `t` WHERE parent_id=:parent_id.
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (7)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/12 20:13:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: SELECT * FROM `bb_categories` `t` WHERE parent_id=:parent_id' in C:\xampp\htdocs\bb\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(7): CActiveRecord->findAll('parent_id=:pare...')
+#4 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category')
+#10 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/bb/backend/index.php?r=category
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php?r=product&category_id=1
+---
+2013/02/12 22:03:02 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\bb\backend\protected\views\category\index.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): CategoryController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): CategoryController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(13): CategoryController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category
+in C:\xampp\htdocs\bb\backend\protected\views\category\index.php (16)
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (13)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/12 22:04:18 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\bb\backend\protected\views\category\index.php:53)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): CategoryController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): CategoryController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(13): CategoryController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category
+in C:\xampp\htdocs\bb\backend\protected\views\category\index.php (53)
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (13)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/12 22:05:33 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\bb\backend\protected\views\category\index.php:53)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): CategoryController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): CategoryController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(13): CategoryController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category
+in C:\xampp\htdocs\bb\backend\protected\views\category\index.php (53)
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (13)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/12 22:05:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbDataReader cannot rewind. It is a forward-only reader.' in C:\xampp\htdocs\bb\framework\db\CDbDataReader.php:203
+Stack trace:
+#0 C:\xampp\htdocs\bb\backend\protected\views\category\index.php(61): CDbDataReader->rewind()
+#1 C:\xampp\htdocs\bb\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\bb\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(13): CController->render('index', Array)
+#6 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#7 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category')
+#12 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/bb/backend/index.php?r=category
+---
+2013/02/12 23:06:29 [error] [php] Undefined index: id (C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category%2Fload
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (42)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/12 23:06:59 [error] [php] Undefined index: id (C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category%2Fload
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (42)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/12 23:07:37 [error] [php] Undefined index: id (C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category%2Fload
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (42)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/12 23:08:34 [error] [php] Undefined index: id (C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category%2Fload
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (42)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/13 10:59:59 [error] [php] Undefined variable: level (C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php:46)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category%2Fsave&parent_id=124&name=%D0%A2%D0%B5%D1%81%D1%803
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (46)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/13 11:00:24 [error] [php] Undefined variable: level (C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php:46)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category%2Fsave&parent_id=124&name=%D0%A2%D0%B5%D1%81%D1%803
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (46)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/13 22:30:34 [error] [php] Undefined index: id (C:\xampp\htdocs\bb\backend\protected\views\brand\index.php:17)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): BrandController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): BrandController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\BrandController.php(12): BrandController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): BrandController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): BrandController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): BrandController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=brand
+2013/02/13 22:31:14 [error] [php] Undefined variable: category (C:\xampp\htdocs\bb\backend\protected\views\brand\index.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): BrandController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): BrandController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\BrandController.php(12): BrandController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): BrandController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): BrandController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): BrandController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=brand
+2013/02/13 22:31:18 [error] [php] Undefined variable: category (C:\xampp\htdocs\bb\backend\protected\views\brand\index.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): BrandController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): BrandController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\BrandController.php(12): BrandController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): BrandController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): BrandController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): BrandController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=brand
+2013/02/13 22:31:51 [error] [php] Undefined variable: category (C:\xampp\htdocs\bb\backend\protected\views\brand\index.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): BrandController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): BrandController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\BrandController.php(12): BrandController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): BrandController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): BrandController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): BrandController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=brand
+2013/02/13 22:32:25 [error] [php] Undefined variable: category (C:\xampp\htdocs\bb\backend\protected\views\brand\index.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): BrandController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): BrandController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\BrandController.php(12): BrandController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): BrandController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): BrandController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): BrandController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): BrandController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=brand
+in C:\xampp\htdocs\bb\backend\protected\views\brand\index.php (24)
+in C:\xampp\htdocs\bb\backend\protected\controllers\BrandController.php (12)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/14 22:16:02 [error] [php] Undefined variable: bran (C:\xampp\htdocs\bb\backend\protected\views\product\index.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(43): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+2013/02/14 22:20:51 [error] [php] Missing argument 2 for CDbCommand::join(), called in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php on line 10 and defined (C:\xampp\htdocs\bb\framework\db\CDbCommand.php:867)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#2 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#4 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+2013/02/14 22:34:30 [error] [php] Undefined index: category_id (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+2013/02/14 22:38:46 [error] [php] Undefined index: category_id (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product
+2013/02/14 22:44:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product' at line 1. The SQL statement executed was: SELECT `DISTINCT` AS `t1`.*
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+WHERE 1
+ORDER BY `id` DESC.
+2013/02/14 22:44:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product' at line 1' in C:\xampp\htdocs\bb\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(25): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=product
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php
+---
+2013/02/16 13:34:52 [error] [php] Undefined index: cat_id (C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php:4)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(195): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/productlist
+2013/02/16 14:00:59 [error] [php] Undefined index: brand_id (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:197)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/productlist&cat_id=124
+2013/02/16 14:03:42 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(201): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/productlist&cat_id=124
+2013/02/16 14:04:09 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(201): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/productlist&cat_id=124
+in C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php (15)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (201)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/16 14:09:41 [error] [php] Undefined variable: product (C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(201): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/productlist
+2013/02/16 17:57:28 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.sessions" is not defined.' in C:\xampp\htdocs\bb\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\base\CModule.php(105): CComponent->__get('sessions')
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php(8): CModule->__get('sessions')
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CartController->actionIndex()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('cart')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=cart
+---
+2013/02/16 17:57:42 [error] [php] Undefined variable: products (C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=cart
+2013/02/16 17:57:58 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\bb\backend\protected\views\cart\index.php:8)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): CartController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): CartController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php(16): CartController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CartController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=cart
+2013/02/16 18:12:11 [error] [php] Indirect modification of overloaded element of CHttpSession has no effect (C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=cart%2Faddtocart&product_id=785
+2013/02/16 18:22:26 [error] [php] Undefined variable: products (C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=cart
+2013/02/16 22:01:04 [error] [php] Undefined index: 0 (C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(205): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/productlist&cat_id=122
+2013/02/16 22:01:11 [error] [php] Undefined index: 0 (C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(205): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/productlist&cat_id=122
+2013/02/16 22:05:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't1.product_id' in 'group statement'. The SQL statement executed was: SELECT DISTINCT t1.*, group_concat(t3.name) category, group_concat(t4.name) brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`product_id`
+ORDER BY `id` DESC.
+in C:\xampp\htdocs\bb\backend\protected\models\Product.php (36)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (199)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/16 22:05:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't1.product_id' in 'group statement'. The SQL statement executed was: SELECT DISTINCT t1.*, group_concat(t3.name) category, group_concat(t4.name) brand
+FROM `bb_products` `t1`
+JOIN `bb_category_product` `t2` ON t1.id = t2.product_id
+JOIN `bb_categories` `t3` ON t2.category_id = t3.id
+JOIN `bb_brands` `t4` ON t1.brand_id = t4.id
+WHERE 1
+GROUP BY `t1`.`product_id`
+ORDER BY `id` DESC' in C:\xampp\htdocs\bb\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\bb\backend\protected\models\Product.php(36): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(199): Product::getProductList(0, 0)
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('productlist')
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bb/backend/index.php?r=product/productlist
+---
+2013/02/16 22:36:12 [error] [php] Undefined index: count (C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=cart%2FChangeCount&product_id=785
+2013/02/16 22:36:23 [error] [php] Undefined index: count (C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=cart%2FChangeCount&product_id=785
+2013/02/16 22:36:39 [error] [php] Undefined index: count (C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=cart%2FChangeCount&product_id=785
+2013/02/16 22:36:57 [error] [php] Undefined index: count (C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=cart%2FChangeCount&product_id=785
+2013/02/16 23:17:07 [error] [php] Undefined index: delivery_id (C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): OrderController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): OrderController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): OrderController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=order/save
+in C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php (23)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/16 23:17:41 [error] [php] Undefined index: delivery_id (C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): OrderController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): OrderController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): OrderController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=order/save
+in C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php (23)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/16 23:18:15 [error] [php] Array to string conversion (C:\xampp\htdocs\bb\framework\db\CDbCommand.php:336)
+Stack trace:
+#0 C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php(35): CDbCommand->insert()
+#1 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): OrderController->actionSave()
+#2 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(286): OrderController->runAction()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(265): OrderController->runActionWithFilters()
+#5 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): OrderController->run()
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=order/save
+in C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php (35)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/16 23:38:59 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\bb\backend\protected\views\order\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): OrderController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): OrderController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php(10): OrderController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): OrderController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): OrderController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): OrderController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): OrderController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=order
+in C:\xampp\htdocs\bb\backend\protected\views\order\index.php (15)
+in C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php (10)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/16 23:40:31 [error] [php] Undefined index: mobile_name (C:\xampp\htdocs\bb\backend\protected\views\order\index.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): OrderController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): OrderController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php(10): OrderController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): OrderController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): OrderController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): OrderController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): OrderController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=order
+in C:\xampp\htdocs\bb\backend\protected\views\order\index.php (18)
+in C:\xampp\htdocs\bb\backend\protected\controllers\OrderController.php (10)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/17 13:24:50 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=1 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `bb_currencies` `t` WHERE default=1 LIMIT 1.
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (38)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/17 13:24:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=1 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `bb_currencies` `t` WHERE default=1 LIMIT 1' in C:\xampp\htdocs\bb\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(38): CActiveRecord->find('default=1')
+#4 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product')
+#10 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/bb/backend/index.php?r=product
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php?r=product/edit&id=786
+---
+2013/02/17 13:39:34 [error] [php] Undefined variable: default_currency (C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php:25)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): ProductController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): ProductController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(222): ProductController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/productlist
+in C:\xampp\htdocs\bb\backend\protected\views\product\frontlist.php (25)
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (222)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/17 15:45:39 [error] [exception.CException] exception 'CException' with message 'Property "Category.level" is not defined.' in C:\xampp\htdocs\bb\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(143): CComponent->__get('level')
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(31): CActiveRecord->__get('level')
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionSave()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('save')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category/save')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=category%2Fsave&parent_id=122&name=%D0%A2%D0%B5%D1%81%D1%82_1
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php?r=category
+---
+2013/02/17 15:46:32 [error] [exception.CException] exception 'CException' with message 'Property "Category.level" is not defined.' in C:\xampp\htdocs\bb\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(143): CComponent->__get('level')
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php(31): CActiveRecord->__get('level')
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CategoryController->actionSave()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('save')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('category/save')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=category%2Fsave&parent_id=122&name=%D0%A2%D0%B5%D1%81%D1%82_1
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php?r=category
+---
+2013/02/17 15:58:39 [error] [exception.CException] exception 'CException' with message 'Property "Category.meta_descript" is not defined.' in C:\xampp\htdocs\bb\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\db\ar\CActiveRecord.php(143): CComponent->__get('meta_descript')
+#1 C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php(214): CActiveRecord->__get('meta_descript')
+#2 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): ProductController->actionProductList()
+#3 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CController->run('productlist')
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#8 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bb\backend\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bb/backend/index.php?r=product/productlist&cat_id=123
+HTTP_REFERER=http://localhost:8080/bb/backend/index.php?r=product/productlist&symbol=UAH
+---
+2013/02/17 17:34:00 [error] [php] Undefined index: id (C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php:230)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): ProductController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): ProductController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=product/frontproduct
+in C:\xampp\htdocs\bb\backend\protected\controllers\ProductController.php (230)
+in C:\xampp\htdocs\bb\backend\index.php (13)
+2013/02/17 19:30:06 [error] [php] Creating default object from empty value (C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php:41)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(286): CategoryController->runAction()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#2 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CategoryController->run()
+#3 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/index.php?r=category%2Fsave&id=0&parent_id=0&name=%D0%A2%D0%B5%D1%81%D1%8211111&meta_keywords=%D1%82&meta_desc=%D0%BA
+in C:\xampp\htdocs\bb\backend\protected\controllers\CategoryController.php (41)
+in C:\xampp\htdocs\bb\backend\index.php (13)

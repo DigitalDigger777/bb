@@ -1,0 +1,8 @@
+img[product_id]{
+    cursor:-webkit-zoom-in;
+}
+
+.modal .modal-body {
+    max-height: 520px;
+    overflow-y: auto;
+}
