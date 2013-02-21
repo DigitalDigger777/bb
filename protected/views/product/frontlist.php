@@ -27,20 +27,22 @@
                     $ship_discount = ($ship_price - (($ship_price/100)*$products[$item]['discount']));
                 ?>        
                 <li class="span3">
-                  <div class="thumbnail">
+                  <div class="thumbnail" style="padding:0; border: none">
                     <img product_id="<?php echo $products[$item]['id']; ?>" src="images/products/<?php echo $products[$item]['photo'];?>" alt="<?php echo $products[$item]['name']; ?>" >
-                    <h5><?php echo $products[$item]['name']; ?></h5>
-                    <p><span class="muted"><?php echo Yii::t('main','Категория: ');?></span><?php echo $products[$item]['category']; ?></p>
-                    <p><span class="muted"><?php echo Yii::t('main','Бренд: ');?></span><?php echo $products[$item]['brand']; ?></p>
-                    <p><span class="muted"><?php echo Yii::t('main','Статус: '); ?></span><?php echo $status[$products[$item]['status_id']]; ?></p>
-                    <p><span class="muted"><?php echo Yii::t('main','Цена: '); ?></span><?php echo round($ship_price, 2); ?> <?php echo $currency->short_name;?></p>
-                    <?php if($products[$item]['discount']):?>
-                    <p><span class="muted"><?php echo Yii::t('main','Скидка: '); ?></span><?php echo $products[$item]['discount']; ?> %</p>
-                    <p><span class="muted"><?php echo Yii::t('main','Цена со скидкой: '); ?></span><?php echo round($ship_discount,2); ?> <?php echo $currency->short_name;?></p>
-                    <?php endif;?>
-                    <p>
-                        <a href="#" class="btn btn-primary add_to_cart" product_id="<?php echo $products[$item]['id'];?>"><?php echo Yii::t('main', 'Заказать');?></a>
-                    </p>
+                    <div style="padding: 3px; background: white">
+                        <h5><?php echo $products[$item]['name']; ?></h5>
+                        <p><span class="muted"><?php echo Yii::t('main','Категория: ');?></span><?php echo $products[$item]['category']; ?></p>
+                        <p><span class="muted"><?php echo Yii::t('main','Бренд: ');?></span><?php echo $products[$item]['brand']; ?></p>
+                        <p><span class="muted"><?php echo Yii::t('main','Статус: '); ?></span><?php echo $status[$products[$item]['status_id']]; ?></p>
+                        <p><span class="muted"><?php echo Yii::t('main','Цена: '); ?></span><?php echo round($ship_price, 2); ?> <?php echo $currency->short_name;?></p>
+                        <?php if($products[$item]['discount']):?>
+                        <p><span class="muted"><?php echo Yii::t('main','Скидка: '); ?></span><?php echo $products[$item]['discount']; ?> %</p>
+                        <p><span class="muted"><?php echo Yii::t('main','Цена со скидкой: '); ?></span><?php echo round($ship_discount,2); ?> <?php echo $currency->short_name;?></p>
+                        <?php endif;?>
+                        <p style="text-align: center">
+                            <a href="#" class="btn btn-primary add_to_cart" product_id="<?php echo $products[$item]['id'];?>"><?php echo Yii::t('main', 'Заказать');?></a>
+                        </p>
+                    </div>
                   </div>
                 </li>
                 <?php 

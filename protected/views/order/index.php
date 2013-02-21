@@ -4,11 +4,11 @@
         <th>ФИО</th>
         <th>Email</th>
         <th>моб. тел.</th>
-        <th>тел.</th>
         <th>Способ доставки</th>
         <th>Адрес</th>
         <th>Доп. инфо.</th>
         <th>Дата</th>
+        <th></th>
     </tr>
     <?php foreach($orders as $order):?>
     <tr>
@@ -16,11 +16,11 @@
         <td><?php echo $order['full_name']; ?></td>
         <td><?php echo $order['email']; ?></td>
         <td><?php echo $order['mobile_phone']; ?></td>
-        <td><?php echo $order['phone']; ?></td>
         <td><?php echo $order['delivery']; ?></td>
         <td><?php echo $order['address']; ?></td>
         <td><?php echo $order['info']; ?></td>
-        <td><?php echo $order['date']; ?></td>
+        <td><?php echo  $order['date']; ?></td>
+        <th><a href="index.php?r=order/products&order_id=<?php echo $order['id'];?>" class="btn btn-primary btn-small">Товары</a></th>
     </tr>
     <?php endforeach;?>
 </table>

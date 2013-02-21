@@ -12,7 +12,20 @@ class OrderController extends Controller
     
     public function actionProducts()
     {
-        $this->render('products');
+        $products = Yii::app()->getDb()->createCommand('SELECT *
+                                            FROM `bb_order_product` T1
+                                            JOIN `bb_products` T2 ON T1.product_id = T2.id
+                                            JOIN `bb_brands` T3 ON T2.brand_id  = T3.id
+                                            WHERE order_id = '.$_REQUEST['order_id'])->queryAll();
+        //статус
+        $_status = Status::model()->findAll();
+        $status = array();
+        foreach($_status  as $item)
+            $status[$item->id] = $item->name;
+        //валюта
+        $currency = Currency::model()->find('symbol=:symbol',array(':symbol'=>isset($_REQUEST['symbol'])?$_REQUEST['symbol']:'UAH'));        
+        $default_currency = Currency::model()->find('`default`=1');
+        $this->render('products', array('products'=>$products, 'status'=>$status, 'currency'=>$currency, 'default_currency'=>$default_currency));
     }
     
     public function actionSave()
@@ -38,5 +51,6 @@ class OrderController extends Controller
         Yii::app()->session['cart_count'] = 0;
         $this->render('confirm');
     }
+    
 }
 ?>
