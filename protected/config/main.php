@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Beautybay',
+	'name'=>'BeautyBay',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -29,24 +29,35 @@ return array(
 		),
 		*/
 	),
-
+        'defaultController'=>'product/productlist',
 	// application components
 	'components'=>array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+                        'loginUrl'=>array('site/login'),
+                        'class'=>'WebUser',
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+                        'showScriptName'=>false,
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				//'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				//'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				//'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                                'product/productlist/<id:\d+>'=>'product/productlist',
+                                'cart/addtocart/<product_id:\d+>'=>'cart/addtocart',
+                                'order/save'=>'order/save',
+                                'order/products/<order_id:\d+>'=>'order/products',
+                                'product/delete/<id:\d+>'=>'product/delete',
+                                'product/public/<id:\d+>'=>'product/public',
+                                'product/edit/<id:\d+>'=>'product/edit',
+                                'category/delete/<id:\d+>'=>'category/delete',
+                                'category/public/<id:\d+>'=>'category/public',                                
 			),
 		),
-		*/
 		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),*/
@@ -59,7 +70,10 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
-		
+                'authManager'=>array(
+                    'class'=>'PhpAuthManager',
+                    'defaultRoles'=>array('guest'),
+                ),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
@@ -91,6 +105,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'korman.yuri@gmail.com',
 	),
 );

@@ -21,7 +21,33 @@
     </div>
     <div class="row-fluid">
         <div class="span12">
-            <a href="index.php?r=cart/order" class="btn btn-primary">Заказать</a>
+            <a href="<?php echo $this->createUrl('cart/order');?>" class="btn btn-primary">Заказать</a>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+(function($){
+    $('document').ready(function(){
+            //удаление из корзины
+            $('.delete').click(function(){
+                var product_id = $(this).attr('product_id');
+                var obj = $(this).parent().parent();
+                var url = base_url+'cart/delete';
+                console.log(url);
+                $.ajax({
+                    url:url,
+                    data:{
+                        product_id:product_id
+                    },
+                    success:function(data){
+                        obj.remove();
+                        $('#cart_count').text(data);
+                    },
+                    error:function(data){
+                        console.log(data);
+                    }
+                });            
+            });
+    });
+})(jQuery)
+</script>

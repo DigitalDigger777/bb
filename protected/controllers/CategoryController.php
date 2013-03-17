@@ -2,6 +2,22 @@
 
 class CategoryController extends Controller
 {
+    public function filters()
+    {
+        return array(
+            'accessControl',
+        );
+    }
+
+    public function accessRules() {
+        return array(
+            array('allow',
+                  'actions'=>array(),
+                  'roles'=>array('admin')),          
+            array('deny', 'users'=>array('*'))
+        );
+    }    
+    
     public function sortTree($array, $item)
     {
         $res = array();
@@ -12,7 +28,7 @@ class CategoryController extends Controller
     
     public function actionIndex()
     {
-        //$categories = Category::model()->findAll();
+        $this->layout = '//layouts/mainauth';
         $categories = Yii::app()->getDb()->createCommand('SELECT T1.*,if(category_id is null, 0, count(1)) cnt
                                                             FROM `bb_categories` T1
                                                             LEFT JOIN `bb_category_product` T2 ON T1.id = T2.category_id
@@ -72,6 +88,7 @@ class CategoryController extends Controller
     
     public function actionEdit()
     {
+        $this->layout = '//layouts/mainauth';
         $categories = Category::model()->findAll('parent_id=:parent_id', array('parent_id'=>0));
         $category = Category::model()->find('id=:id', array(':id'=>$_REQUEST['id']));
         $this->render('index', array('category'=>$category, 'categories'=>$categories));
@@ -82,14 +99,14 @@ class CategoryController extends Controller
         $category = Category::model()->find('id=:id',array(':id'=>$_REQUEST['id']));
         $category->public = $category->public?0:1;
         $category->save();
-        $this->redirect('index.php?r=category');
+        $this->redirect($this->createUrl('category/index'));
     }
     
     public function actionDelete()
     {
         $category = Category::model()->find('id=:id',array(':id'=>$_REQUEST['id']));
         $category->delete();
-        $this->redirect('index.php?r=category');        
+        $this->redirect($this->createUrl('category/index'));        
     }
 }
 ?>

@@ -1,6 +1,6 @@
 <div class="span12">
     <div class="container">
-        <form action="index.php?r=order/save" method="POST">
+        <form action="<?php echo $this->createUrl('order/save');?>" method="POST">
             <fieldset>
                 <legend>Персональная информация</legend>
                 <label for="full_name">ФИО</label>

@@ -10,7 +10,7 @@ class Product extends CActiveRecord
         return 'bb_products';
     }
     
-    public static function getProductList($category_id = 0, $brand_id = 0, $search = '')
+    public static function getProductList($category_id = 0, $brand_id = 0, $search = '', $status_id=0, $price='', $currency)
     {
         $condition = '1';
         $params = array();
@@ -28,6 +28,19 @@ class Product extends CActiveRecord
         {
             $condition .= ' AND (t1.name like :name OR t3.name like :name OR t4.name like :name)';
             $params[':name'] = '%'.$search.'%';
+        }
+        if($status_id)
+        {
+            $condition .= ' AND status_id=:status_id';
+            $params[':status_id'] = $status_id;
+        }
+        if(!empty($price))
+        {
+            $price_array = explode('-', $price);
+            $condition .= ' AND ((((price+delivery_price)/100)*margin+price+delivery_price)*:rate BETWEEN :price_start AND :price_end)';
+            $params[':price_start'] = $price_array[0];
+            $params[':price_end']   = $price_array[1];
+            $params[':rate']        = $currency->rate;
         }
         $products = Yii::app()->getDb()->createCommand()
                                        ->selectDistinct('t1.*, group_concat(t3.name) category, t4.name brand')

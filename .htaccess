@@ -1,0 +1,14 @@
+#Redirect / /hotline/app/hot/index.php?r=product/items&category_id=2
+#RewriteEngine on
+#RewriteRule ^/([a-z]+)/products/([0-9]+)/$ /index.php?r=product/items&category_id=$2&_lang=$1 [R=301,L]
+
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php

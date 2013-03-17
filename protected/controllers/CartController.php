@@ -1,7 +1,7 @@
 <?php
 
 class CartController extends Controller
-{
+{    
     public function actionIndex()
     {
         $this->layout = 'front';
@@ -30,9 +30,8 @@ class CartController extends Controller
     public function actionAddToCart()
     {
         $a = Yii::app()->session['cart'];
-        $cart_count = Yii::app()->session['cart_count'];
+        //$cart_count = Yii::app()->session['cart_count'];
         $cart_count = 0;
-        
         
         $a[$_REQUEST['product_id']]['product_id']    = $_REQUEST['product_id'];
         $a[$_REQUEST['product_id']]['count']         = 1;
@@ -47,7 +46,7 @@ class CartController extends Controller
     public function actionChangeCount()
     {
         $a = Yii::app()->session['cart'];
-        $cart_count = Yii::app()->session['cart_count'];
+        //$cart_count = Yii::app()->session['cart_count'];
         $cart_count = 0;
         
         $a[$_REQUEST['product_id']]['count'] = $_REQUEST['count'];
@@ -62,8 +61,14 @@ class CartController extends Controller
     public function actionDelete()
     {
         $a = Yii::app()->session['cart'];
+        $cart_count = 0;
         unset($a[$_REQUEST['product_id']]);
-        Yii::app()->session['cart'] = $a;
+        foreach($a as $item)
+            $cart_count += $item['count'];
+        
+        Yii::app()->session['cart']         = $a;
+        Yii::app()->session['cart_count']   = $cart_count;
+        print($cart_count);
         Yii::app()->end();
     }
 }

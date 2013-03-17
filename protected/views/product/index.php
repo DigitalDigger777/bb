@@ -1,11 +1,11 @@
 <div class="row-fluid">
     <div class="span3">
         <ul class="nav nav-pills">
-            <li><a href="index.php?r=product/product">Новый товар</a></li>
+            <li><a href="<?php echo $this->createUrl('product/product');?>">Новый товар</a></li>
         </ul>        
     </div>
     <div class="span9">
-        <form action="index.php?r=product" method="POST" id="filter">
+        <form action="<?php echo $this->createUrl('product/index');?>" method="POST" id="filter">
             <select name="brand_id" id="brand_id">
                 <option value="0">--Не выбрано--</option>
                 <?php foreach($brands as $brand):?>
@@ -31,7 +31,7 @@
     <?php for($m = 0; $m < 4; $m++):?>
         <?php if($i == 0&&$m == 0):?>
                 <li class="span3">
-                    <a class="thumbnail" href="index.php?r=product/product">
+                    <a class="thumbnail" href="<?php echo $this->createUrl('product/product');?>">
                         <img src="http://placehold.it/200x200" alt="" />
                     </a>
                 </li>
@@ -39,15 +39,16 @@
         <?php endif; ?>
         <li class="span3">
             <div class="thumbnail">
-                <img src="images/products/<?php echo $products[$item]['photo'];?>" alt="" />
+                <img product_id="<?php echo $products[$item]['id']; ?>" src="<?php echo Yii::app()->baseUrl; ?>/images/products/<?php echo $products[$item]['photo'];?>" alt="" />
                 <h5><?php echo $products[$item]['name']; ?></h5>
                 <div class="row-fluid">
                     <?php
                         //цена в магазине
-                        $ship_price = (($products[$item]['price']+$products[$item]['delivery_price'])/100)*$products[$item]['margin']+$products[$item]['price'];
+                        $ship_price = (($products[$item]['price']+$products[$item]['delivery_price'])/100)*$products[$item]['margin']+$products[$item]['price']+$products[$item]['delivery_price'];
                         //цена со скидкой
                         $ship_discount = $ship_price - ($ship_price/100)*$products[$item]['discount'];
                     ?>
+                    <!--<?php echo $products[$item]['price'].':'.$products[$item]['delivery_price'].':'.$products[$item]['margin'].':'.$products[$item]['price']?>-->
                     <div class="span12">
                         <p><span class="muted"><?php echo Yii::t('main', 'Статус: '); ?></span><?php echo $status[$products[$item]['status_id']]; ?></p>
                         <p><span class="muted"><?php echo Yii::t('main', 'Цена: '); ?></span><?php echo $products[$item]['price']; ?><?php echo $default_currency->short_name; ?></p>
@@ -61,15 +62,15 @@
                 <div class="row-fluid">
                     <div class="span12">
                         <div class="btn-group pull-right">
-                            <a class="btn <?php echo $products[$item]['public']==0?'btn-danger':'btn-primary';?> dropdown-toggle" data-toggle="dropdown" href="#">
+                            <a class="btn <?php echo ($products[$item]['public_cat']== 0||$products[$item]['public'] == 0)?'btn-danger':'btn-primary';?> dropdown-toggle" data-toggle="dropdown" href="#">
                               Действие
                               <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
                               <li>
-                                  <a href="index.php?r=product/edit&id=<?php echo $products[$item]['id']; ?>">Редактировать</a>
-                                  <a href="index.php?r=product/public&id=<?php echo $products[$item]['id']; ?>"><?php echo $products[$item]['public']?Yii::t('main', 'Снять с публикации'):Yii::t('main', 'Публиковать'); ?></a>
-                                  <a href="index.php?r=product/delete&id=<?php echo $products[$item]['id']; ?>">Удалить</a>
+                                  <a href="<?php echo $this->createUrl('product/edit', array('id'=>$products[$item]['id']));?>">Редактировать</a>
+                                  <a href="<?php echo $this->createUrl('product/public', array('id'=>$products[$item]['id']));?>"><?php echo $products[$item]['public']?Yii::t('main', 'Снять с публикации'):Yii::t('main', 'Публиковать'); ?></a>
+                                  <a href="<?php echo $this->createUrl('product/delete', array('id'=>$products[$item]['id']));?>">Удалить</a>
                               </li>
                             </ul>
                         </div>
@@ -93,6 +94,11 @@
         $('document').ready(function(){
             $('#category_id, #brand_id').change(function(){
                 $('#filter').submit();
+            });
+            
+            $('img[product_id]').click(function(){
+                var url = base_url+'product/edit/'+$(this).attr('product_id');
+                window.location = url;
             });
         });
     })(jQuery)

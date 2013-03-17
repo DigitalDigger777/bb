@@ -20,7 +20,7 @@
         <td><?php echo $order['address']; ?></td>
         <td><?php echo $order['info']; ?></td>
         <td><?php echo  $order['date']; ?></td>
-        <th><a href="index.php?r=order/products&order_id=<?php echo $order['id'];?>" class="btn btn-primary btn-small">Товары</a></th>
+        <th><a href="<?php echo $this->createUrl('order/products', array('order_id'=>$order['id']));?>" class="btn btn-primary btn-small">Товары</a></th>
     </tr>
     <?php endforeach;?>
 </table>

@@ -2,8 +2,28 @@
 
 class ProductController extends Controller
 {
+    public function filters()
+    {
+        return array(
+            'accessControl',
+        );
+    }
+    
+    public function accessRules() {
+        return array(
+            array('allow',
+                  'actions'=>array('productlist','frontproduct'),
+                  'users'=>array('*')),
+            array('allow',
+                  'actions'=>array(),
+                  'roles'=>array('admin')),
+            array('deny', 'users'=>array('*'))
+        );
+    }
+    
     public function actionIndex()
     {
+        $this->layout = '//layouts/mainauth';
         $condition = '1';
         $params = array();
         if(isset($_REQUEST['category_id'])&&$_REQUEST['category_id']!=0)
@@ -17,7 +37,7 @@ class ProductController extends Controller
             $params[':brand_id'] = $_REQUEST['brand_id'];
         }
         $products = Yii::app()->getDb()->createCommand()
-                                       ->selectDistinct('t1.*, ifnull(t2.category_id,0) `public`')
+                                       ->selectDistinct('t1.*, ifnull(t2.category_id,0) `public_cat`')
                                        ->from('bb_products t1')
                                        ->leftJoin('bb_category_product t2', 't1.id = t2.product_id')
                                        ->where($condition, $params)
@@ -45,6 +65,7 @@ class ProductController extends Controller
     
     public function actionProduct()
     {
+        $this->layout = '//layouts/mainauth';
         $brands = Brand::model()->findAll();
         $c = new CDbCriteria();
         $c->order = 'if(parent_id = 0, id, parent_id), parent_id';
@@ -124,7 +145,7 @@ class ProductController extends Controller
                 Yii::app()->getDb()->createCommand()->insert('bb_category_product', array('category_id'=>$item, 'product_id'=>$product->id));
             }
         }
-        $this->redirect('index.php?r=product');
+        $this->redirect($this->createUrl('product/index'));
     }
     
     public function actionPublic()
@@ -132,11 +153,12 @@ class ProductController extends Controller
         $product = Product::model()->find('id=:id',array(':id'=>$_REQUEST['id']));
         $product->public = $product->public?0:1;
         $product->save();
-        $this->redirect('index.php?r=product');
+        $this->redirect($this->createUrl('product/index'));
     }
     
     public function actionEdit()
     {
+        $this->layout = '//layouts/mainauth';
         $brands = Brand::model()->findAll();
         $c = new CDbCriteria();
         $c->order = 'if(parent_id = 0, id, parent_id), parent_id';        
@@ -155,7 +177,7 @@ class ProductController extends Controller
     {
         $product = Product::model()->find('id=:id',array(':id'=>$_REQUEST['id']));
         $product->delete();
-        $this->redirect('index.php?r=product');        
+        $this->redirect($this->createUrl('product/index'));
     }
     
     public function actionUploadPhoto()
@@ -198,13 +220,16 @@ class ProductController extends Controller
         $this->layout = 'front';
         //категории
         $criteria = new CDbCriteria();
-        $criteria->addCondition('parent_id=0');
         $criteria->order = 'if(parent_id = 0, id, parent_id), parent_id';
         $categories = Category::model()->findAll($criteria);
         //продукты
-        $cat_id = isset($_REQUEST['cat_id'])?$_REQUEST['cat_id']:0;
-        $brand_id = isset($_REQUEST['brand_id'])?$_REQUEST['brand_id']:0;
-        $products = Product::getProductList($cat_id, $brand_id, isset($_REQUEST['search'])?$_REQUEST['search']:'');
+        $cat_id     = isset($_REQUEST['cat_id'])?$_REQUEST['cat_id']:0;
+        $brand_id   = isset($_REQUEST['brand_id'])?$_REQUEST['brand_id']:0;
+        $status_id  = isset($_REQUEST['status_id'])?$_REQUEST['status_id']:0;
+        $price      = isset($_REQUEST['price'])?$_REQUEST['price']:'';
+        //валюта
+        $currency = Currency::model()->find('symbol=:symbol',array(':symbol'=>isset($_REQUEST['symbol'])?$_REQUEST['symbol']:'UAH'));
+        $products = Product::getProductList($cat_id, $brand_id, isset($_REQUEST['search'])?$_REQUEST['search']:'', $status_id, $price, $currency);
         //текущая категория
         if($cat_id)
         {
@@ -219,8 +244,6 @@ class ProductController extends Controller
         $status = array();
         foreach($_status  as $item)
             $status[$item->id] = $item->name;
-        //валюта
-        $currency = Currency::model()->find('symbol=:symbol',array(':symbol'=>isset($_REQUEST['symbol'])?$_REQUEST['symbol']:'UAH'));
         //бренды
         $brands = Yii::app()->getDb()->createCommand()
                                      ->selectDistinct('t2.*')
@@ -234,8 +257,12 @@ class ProductController extends Controller
     public function actionFrontProduct()
     {
         $this->layout = 'ajax';
+        //валюта
+        $currency = Currency::model()->find('symbol=:symbol',array(':symbol'=>isset($_REQUEST['symbol'])?$_REQUEST['symbol']:'UAH'));
         $product = Product::model()->find('id=:id', array(':id'=>$_REQUEST['id']));
-        $this->render('frontproduct', array('product'=>$product));
+        $ship_price     = ((($product->price+$product->delivery_price)/100)*$product->margin+$product->price+$product->delivery_price)*$currency->rate;
+        $ship_discount  = ($ship_price - (($ship_price/100)*$product->discount));
+        $this->render('frontproduct', array('product'=>$product, 'price'=>$ship_discount, 'currency'=>$currency));
     }
 }
 ?>

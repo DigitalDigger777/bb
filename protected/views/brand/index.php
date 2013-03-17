@@ -15,13 +15,13 @@
     <?php foreach($brands as $brand):?>
     <tr>
         <td><?php echo $brand['id']; ?></td>
-        <td><img src="images/brands/<?php echo $brand['logo']; ?>" alt="" /></td>
+        <td><img src="<?php echo Yii::app()->baseUrl; ?>/images/brands/<?php echo $brand['logo']; ?>" alt="" /></td>
         <td><?php echo $brand['name']; ?></td>
         <td><?php echo $brand['desc']; ?></td>
         <!--<td><?php echo $brand['lang']; ?></td>-->
         <td><?php echo $brand['public']; ?></td>
         <td><?php echo $brand['order']; ?></td>
-        <td><a href="index.php?r=product&brand_id=<?php echo $brand['id']; ?>"><span class="label label-success">Продукты</span><span class="badge badge-warning"><?php echo $brand['cnt']; ?></span></a></td>
+        <td><a href="<?php echo $this->createUrl('product', array('brand_id'=>$brand['id']));?>"><span class="label label-success">Продукты</span><span class="badge badge-warning"><?php echo $brand['cnt']; ?></span></a></td>
     </tr>
     <?php endforeach; ?>
 </table>
@@ -49,3 +49,26 @@
         <a href="#" class="btn btn-primary" data-dismiss="modal" id="brand_save">Сохранить</a>
     </div>
 </div>
+<script type="text/javascript">
+(function($){
+    $('document').ready(function(){
+        //сохранение бренда
+        $('#brand_save').click(function(){
+            var url = base_url+'brand/save';
+            $.ajax({
+                url:url,
+                data:{
+                    name:$('#name').val()
+                },
+                success:function(obj){
+                    window.location = 'index';
+                },
+                error:function(obj){
+                    console.log(obj);
+                }
+            });            
+        });        
+    });
+    
+})(jQuery)
+</script>

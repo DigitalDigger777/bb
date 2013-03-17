@@ -3,6 +3,7 @@
     $count_row = ceil($count/4);
     $item = 0;
 ?>
+
 <?php for($i = 0; $i<$count_row; $i++):?>
 <ul class="thumbnails">
     <?php for($m = 0; $m < 4; $m++):?>
@@ -36,9 +37,9 @@
                             </a>
                             <ul class="dropdown-menu">
                               <li>
-                                  <a href="index.php?r=product/edit&id=<?php echo $products[$item]['id']; ?>">Редактировать</a>
-                                  <a href="index.php?r=product/public&id=<?php echo $products[$item]['id']; ?>"><?php echo $products[$item]['public']?Yii::t('main', 'Снять с публикации'):Yii::t('main', 'Публиковать'); ?></a>
-                                  <a href="index.php?r=product/delete&id=<?php echo $products[$item]['id']; ?>">Удалить</a>
+                                  <a href="<?php echo $this->createUrl('product/edit', array('id'=>$products[$item]['id']));?>">Редактировать</a>
+                                  <a href="<?php echo $this->createUrl('product/public', array('id'=>$products[$item]['id']));?>"><?php echo $products[$item]['public']?Yii::t('main', 'Снять с публикации'):Yii::t('main', 'Публиковать'); ?></a>
+                                  <a href="<?php echo $this->createUrl('product/delete', array('id'=>$products[$item]['id']));?>">Удалить</a>
                               </li>
                             </ul>
                         </div>

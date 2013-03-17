@@ -2,8 +2,26 @@
 
 class OrderController extends Controller
 {
+    public function filters()
+    {
+        return array(
+            'accessControl',
+        );
+    }
+    
+    public function accessRules() {
+        return array(
+            array('allow', 'actions'=>array('save'), 'roles'=>array('guest')),
+            array('allow',
+                  'actions'=>array(),
+                  'roles'=>array('admin')),          
+            array('deny', 'users'=>array('*'))
+        );
+    }
+    
     public function actionIndex()
     {
+        $this->layout = '//layouts/mainauth';
         $orders = Yii::app()->getDb()->createCommand('SELECT T1.*, T2.name delivery
                                                       FROM `bb_orders` T1
                                                       JOIN `bb_delivery_methods` T2 ON T1.delivery_id = T2.id')->queryAll();
@@ -12,6 +30,7 @@ class OrderController extends Controller
     
     public function actionProducts()
     {
+        $this->layout = '//layouts/mainauth';
         $products = Yii::app()->getDb()->createCommand('SELECT *
                                             FROM `bb_order_product` T1
                                             JOIN `bb_products` T2 ON T1.product_id = T2.id
@@ -32,9 +51,9 @@ class OrderController extends Controller
     {
         $this->layout = 'front';
         $order = new Order();
-        $order->full_name       = $_REQUEST['full_name'];
-        $order->mobile_phone    = $_REQUEST['mobile_phone'];
-        $order->phone           = $_REQUEST['phone'];
+        $order->full_name       = isset($_REQUEST['full_name'])?$_REQUEST['full_name']:'';
+        $order->mobile_phone    = isset($_REQUEST['mobile_phone'])?$_REQUEST['mobile_phone']:'';
+        $order->phone           = isset($_REQUEST['phone'])?$_REQUEST['phone']:'';
         $order->email           = $_REQUEST['email'];
         $order->delivery_id     = $_REQUEST['delivery_id'];
         $order->address         = $_REQUEST['address'];
@@ -49,6 +68,7 @@ class OrderController extends Controller
             Yii::app()->getDb()->createCommand()->insert('bb_order_product', array('order_id'=>$order->id, 'product_id'=>$item['product_id'], 'count'=>$item['count']));
         Yii::app()->session['cart'] = array();
         Yii::app()->session['cart_count'] = 0;
+        
         $this->render('confirm');
     }
     

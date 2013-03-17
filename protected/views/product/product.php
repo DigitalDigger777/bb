@@ -2,17 +2,17 @@
     <div class="span4 well">
         <!--<img src="http://placehold.it/350x350" alt="" />-->
         <?php if(isset($product)):?>
-        <img class="photo" src="images/products/<?php echo $product->photo; ?>" alt="" />
+        <img class="photo" src="<?php echo Yii::app()->baseUrl; ?>/images/products/<?php echo $product->photo; ?>" alt="" />
         <?php else:?>
         <img class="photo" src="http://placehold.it/350x350" alt="" />
         <?php endif; ?>
-        <form id="upload_photo" action="index.php?r=CompanyObject/uploadphoto" method="POST" enctype="multipart/form-data" target="result_upload" style="display:none">
+        <form id="upload_photo" action="<?php echo $this->createUrl('product/uploadphoto');?>" method="POST" enctype="multipart/form-data" target="result_upload" style="display:none">
             <input type="file" name="_photo" id="_photo" />
         </form>
         <iframe name="result_upload" id="result_upload" src="" frameborder="0" style="width: 0; height: 0"></iframe>
     </div>
     <div class="span8 well">
-        <form action="index.php?r=product/save" method="POST">
+        <form action="<?php echo $this->createUrl('product/save');?>" method="POST">
             <input type="hidden" name="id" value="<?php echo isset($product)?$product->id:''; ?>"/>
             <input type="hidden" name="photo" value="<?php echo isset($product)?$product->photo:''; ?>"/>
             <fieldset>

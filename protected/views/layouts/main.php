@@ -16,24 +16,32 @@
         <div class="row-fluid">
             <div class="navbar navbar-fixed-top">
                 <div class="navbar-inner">
-                    <a class="brand" href="index.php">BeautyBay</a>
+                    <a class="brand" href="<?php echo $this->createUrl('/');?>">BeautyBay</a>
+                    <?php if(Yii::app()->user->id):?>
+                    <ul class="nav pull-right">
+                        <!--<li><?php echo Yii::app()->user->username;?></li>-->
+                        <li><a href="<?php echo $this->createUrl('site/logout');?>">Выход</a></li>
+                    </ul>
+                    <?php endif?>
                 </div>
             </div>
         </div>
-        <div class="row-fluid">
-            <div class="span9 well">
-                <?php echo $content; ?>
-            </div>
-            <div class="span3">
-                <ul class="nav nav-list well">
-                    <li<?php echo !isset($_REQUEST['r'])?' class="active"':''; ?>><a href="index.php"><?php echo Yii::t('main', 'Главная');?></a></li>
-                    <li<?php echo isset($_REQUEST['r'])&&$_REQUEST['r']=='category'?' class="active"':''; ?>><a href="index.php?r=category"><?php echo Yii::t('main', 'Категории');?></a></li>
-                    <li<?php echo isset($_REQUEST['r'])&&$_REQUEST['r']=='brand'?' class="active"':''; ?>><a href="index.php?r=brand"><?php echo Yii::t('main', 'Бренды');?></a></li>
-                    <li<?php echo isset($_REQUEST['r'])&&$_REQUEST['r']=='product'?' class="active"':''; ?>><a href="index.php?r=product"><?php echo Yii::t('main', 'Товары');?></a></li>
-                    <li<?php echo isset($_REQUEST['r'])&&$_REQUEST['r']=='order'?' class="active"':''; ?>><a href="index.php?r=order"><?php echo Yii::t('main', 'Заказы');?></a></li>
-                </ul>
-            </div>
-        </div>
+        
+        <?php echo $content; ?>
+        
     </div>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-22000922-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>	
 </body>
 </html>
