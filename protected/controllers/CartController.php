@@ -17,8 +17,8 @@ class CartController extends Controller
             $products = Product::model()->findAll($criteria);
         }else
             $products = array();
-        
-        $this->render('index', array('products'=>$products, 'cart'=>$cart));
+        $currency = Currency::model()->find('symbol=:symbol',array(':symbol'=>isset($_REQUEST['symbol'])?$_REQUEST['symbol']:'UAH'));
+        $this->render('index', array('products'=>$products, 'cart'=>$cart, 'currency'=>$currency));
     }
     
     public function actionOrder()

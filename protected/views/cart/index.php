@@ -9,10 +9,16 @@
                     <th style="width: 10%"></th>
                 </tr>
                 <?php foreach($products as $product):?>
+                <?php
+                    //цена в магазине
+                    $ship_price = ((($product->price+$product->delivery_price)/100)*$product->margin+$product->price+$product->delivery_price)*$currency->rate;
+                    //цена со скидкой
+                    $ship_discount = ($ship_price - (($ship_price/100)*$product->discount));
+                ?>                
                 <tr>
                     <td><?php echo $product->name; ?></td>
                     <td><input type="number" name="count" style="width: 30px" value="<?php echo isset($cart[$product->id]['count'])?$cart[$product->id]['count']:1; ?>" product_id="<?php echo $product->id; ?>"/></td>
-                    <td><?php echo $product->price; ?></td>
+                    <td><?php echo round($ship_discount); ?> <?php echo $currency->short_name;?></td>
                     <td><a href="#" class="btn btn-danger delete" product_id="<?php echo $product->id; ?>">Удалить</a></td>
                 </tr>
                 <?php endforeach;?>

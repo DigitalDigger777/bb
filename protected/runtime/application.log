@@ -8978,3 +8978,31 @@ Stack trace:
 #9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
 REQUEST_URI=/bb/backend/product/frontproduct?id=803
+2013/04/07 21:39:11 [error] [php] Undefined variable: item (C:\xampp\htdocs\bb\backend\protected\views\cart\index.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): CartController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): CartController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php(21): CartController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CartController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/cart/index
+2013/04/07 22:02:01 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\bb\backend\protected\views\cart\index.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\bb\framework\web\CController.php(869): CartController->renderFile()
+#1 C:\xampp\htdocs\bb\framework\web\CController.php(782): CartController->renderPartial()
+#2 C:\xampp\htdocs\bb\backend\protected\controllers\CartController.php(21): CartController->render()
+#3 C:\xampp\htdocs\bb\framework\web\actions\CInlineAction.php(49): CartController->actionIndex()
+#4 C:\xampp\htdocs\bb\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\bb\framework\web\CController.php(286): CartController->runAction()
+#6 C:\xampp\htdocs\bb\framework\web\CController.php(265): CartController->runActionWithFilters()
+#7 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(282): CartController->run()
+#8 C:\xampp\htdocs\bb\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bb\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bb\backend\index.php(13): CWebApplication->run()
+REQUEST_URI=/bb/backend/cart/index
